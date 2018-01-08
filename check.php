@@ -10,7 +10,7 @@ date_default_timezone_set('America/Chicago');
 $username = ''; //Typically your email address
 $password = ''; //Your password
 $deviceid = ; //Which device you are wanting to control, you could use function getDevices() below to find this
-$phones = array('+18888888888'); //One or multiple phones that will receive the text
+$phones = array('+18888888888'); //One or multiple phones that will receive the text. Be sure to keep the +1 and no other dashes/spaces
 $time = '22:30'; //Time you want to check the garage door and alert you if is open, 24 hour format
 
 $sid = ''; //Twilio ID
@@ -64,9 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 					}
 				}
 			}
-			
-			//print $mygaragedoorstatus;
-			//blahhM&ML?O31h&aK
 			
 			if ($mygaragedoorstatus !== null) {
 				if ($mygaragedoorstatus == 1) {
